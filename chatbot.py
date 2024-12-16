@@ -1,5 +1,3 @@
-# chatbot.py
-
 def respond_to_user(input_text):
     # Define some simple rules for responses
     rules = {
@@ -22,12 +20,11 @@ def respond_to_user(input_text):
 def main():
     print("Welcome to the rule-based chatbot! Type 'bye' to exit.")
     while True:
-        user_input = input("You: ")
-        if user_input.lower() == "bye":
-            print("Bot: Goodbye! Have a great day!")
-            break
+        user_input = input("You: ").strip()
         response = respond_to_user(user_input)
         print(f"Bot: {response}")
+        if user_input.lower() == "bye":
+            break
 
 if __name__ == "__main__":
     main()
